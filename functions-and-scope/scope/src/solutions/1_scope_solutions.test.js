@@ -17,7 +17,7 @@ var whoStoleTheCookies;
 var whoseFingerprintsAreOnItNow;
 
 {
-  const fingerprints = "Cookie Monster"; // This is the only change needed. You cant also use "let" instead of "const" here.
+  const fingerprints = "Cookie Monster"; // This is the only change needed. You can also use "let" instead of "const" here.
   whoStoleTheCookies = function() {
     return fingerprints;
   };
@@ -38,9 +38,10 @@ var module = {};
 var modules = {};
 // END SETUP
 
-// NOTE TO TEACHER/DRIVER: The "student" version of this exercise does any have any wrappers around the logic which is meant to be
-//                         in an individual file(s). This is the main purpose of the exercise, for students to understand that by
-//                         wrapping the different file logic in their methods we create an entire module system!
+// NOTE TO TEACHER/DRIVER: 
+// The "student" version of this exercise doesn't any have any wrappers around the logic which is meant to be
+// in an individual file(s). This is the main purpose of the exercise, for students to understand that by
+// wrapping the different file logic in their methods, we create an entire module system!
 
 // SEE EXAMPLE BELOW FOR THE "BROKEN" EXAMPLE
 

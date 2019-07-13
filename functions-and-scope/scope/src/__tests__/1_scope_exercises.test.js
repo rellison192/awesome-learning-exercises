@@ -4,12 +4,12 @@
 
 Welcome to Functions and Scope - Scope!
 
-In the previous section we learned about the 
+In the previous section, we learned about the 
 dynamic context feature of JavaScript functions. 
-Today we will explore the static _scope_ and the
+Today, we will explore the static _scope_ and the
 differences of scope vs context. We will demonstrate 
-how scope _work_ directly by exploring some of 
-the lesser known gotchas in JavaScript like "hoisting
+how scope _works_ directly, by exploring some of 
+the lesser known gotchas in JavaScript like "hoisting".
 
 ⬆️
 `;
@@ -20,12 +20,12 @@ Let's kick things off with examples of the basic scopes in JavaScript.
 💡 Local scope: only accessible within the enclosed function.
 💡 Global scope: accessible to ALL functions.
 
-💡 One of the functions below changes the locally scope 
-💡 love variable. The other changes a globally scoped love
+💡 One of the functions below changes the locally scoped
+💡 'love' variable. The other changes a globally scoped 'love'
 
-🛠️ Take a look at the following code and assign 
-🛠️ the correct answers to the two VARIABLES 
-🛠️ (the ones in all caps) below to pass the exercise
+🛠️ Take a look at the following code and assign
+🛠️ the correct answers to the two VARIABLES
+🛠️ (the ones in all caps) below to pass the exercise.
 `;
 
 var love = "What is love?";
@@ -48,13 +48,13 @@ const WHAT_IS_LOCAL_LOVE = "";
 
 `📚 Exercise #1b - Hoisting 📚
 
-In JavaScript every variable declared in a function is "hoisted" 
-to the top of the function no matter where in the function it is defined.
+In JavaScript, every variable declared in a function is "hoisted"
+to the top of the function, no matter where in the function it is defined.
 
-🛠️ Look at the code below and assign the correct value 
-🛠️ to WHAT_IS_HOISTED_LOVE
+🛠️ Look at the code below and assign the correct value
+🛠️ to 'WHAT_IS_HOISTED_LOVE'.
 
-💡 For bonus points, talk to each other about why your answer is correct
+💡 For bonus points, talk to each other about why your answer is correct.
 `;
 
 function noop() {}
@@ -72,16 +72,16 @@ const WHAT_IS_HOISTED_LOVE = "";
 
 `📚 Exercise #1c - Block Scope 📚
 
-ES6 Syntax introduced two new ways to declare variables 
+ES6 Syntax introduced two new ways to declare variables:
 with let and const keywords. let & const also 
-introduce a new type of scope, BLOCK SCOPE
+introduce a new type of scope: block scope.
 
 Take a look at the code below. Notice that the log callback is called
 with the love variable, but what is the value of the love variable?
 
-🛠️ It's your job to answer that question
+🛠️ It's your job to answer that question.
 🛠️ Assign the correct of what the love variable is when called by log
-🛠️ to the WHAT_IS_BLOCK_LOVE declaration below. 
+🛠️ to the WHAT_IS_BLOCK_LOVE declaration below.
 `;
 
 (function(log) {
@@ -113,12 +113,12 @@ describe("Group exercises", () => {
 
 `📚 Exercise #2 - The Scope of Cookie Monster
 
-🛠️ Refactor the variable types and scopes of the following code 
-🛠️ block so that whoStoleTheCookies() returns the value 
+🛠️ Refactor the variable types and scopes of the following code
+🛠️ block so that whoStoleTheCookies() returns the value
 🛠️ of fingerprints in its original scope.
 
-💡 whoseFingerprintsAreOnItNow() already returns the value 
-💡 of fingerprints in the global scope. 
+💡 whoseFingerprintsAreOnItNow() already returns the value
+💡 of fingerprints in the global scope.
 💡 Make sure you don't accidentally change that.
 `;
 
@@ -133,7 +133,9 @@ var whoseFingerprintsAreOnItNow;
   };
 }
 
-var fingerprints = "You!"; // Cookie Monster sneakily replaces his fingerprints with yours. Don't actually do this in your day-to-day work!
+// Cookie Monster sneakily replaces his fingerprints with yours. 
+// Don't actually do this in your day-to-day work!
+var fingerprints = "You!";
 whoseFingerprintsAreOnItNow = function() {
   return fingerprints;
 };
@@ -152,23 +154,23 @@ describe("Pair exercise 1", () => {
 `📚 Exercise #3 - The Module Pattern
 
 Let's put it all together to see how scope is useful when applied 
-to a very common problem in JavaScript, MODULES.
+to a very common problem in JavaScript: MODULES.
 
-All code is executed in GLOBAL scope in JavaScript, only when we 
-define methods is when we create additional scopes.
+All code is executed in GLOBAL scope in JavaScript; only when we 
+define functions is when additional scopes are created.
 
-When we have thousands of JavaScript files in a codebase
-eventually we will run into variable collisions as files re-define 
+When we have thousands of JavaScript files in a codebase,
+we eventually will run into variable collisions as files re-define 
 variables with common names like "x" or "i". 
 
-But if we utilize JavaScript scope creatively we can overcome
+But if we utilize JavaScript scope creatively, we can overcome
 this problem!
 
-💡 We are mocking the idea of different files below,
-💡 note the code comments that denote different files. 
+💡 We are mocking the idea of different files below.
+💡 Note the code comments that denote different files. 
 
-🛠️ Make sure each file  is a module by creating a scope for each one
-🛠️ Make sure each file/module has access to it's own "module" object
+🛠️ Make sure each file is a module by creating a scope for each one.
+🛠️ Make sure each file/module has access to its own "module" object.
 🛠️ Make sure the result of _require('main') return the number 6!
 
 The goal of this exercise is to scope the two methods 
@@ -182,7 +184,7 @@ var modules = {};
 
 `
 💡 Our require method will use this object to map a module 
-💡 to it's exports, use this as a clue on how to solve this problem!
+💡 to its exports. Use this as a clue on how to solve this problem!
 `;
 
 // Remove this when writing your solution
@@ -211,7 +213,7 @@ module.exports = function(value) {
 `--- FILE: add2_module.js ---
 💡 This module returns a function which adds 2 to a value passed in
 `;
- 
+
 module.exports = function(value) {
   return (value += 2);
 };
@@ -231,9 +233,9 @@ module.exports = addTwo(result);
 
 `
 💡 Here is our require method we see used above, 
-💡 it's mostly complete for our purpose
+💡 it's mostly complete for our purposes.
 
-🛠️ fix it to make sure a new module is created correctly 
+🛠️ Fix it to make sure a new module is created correctly
 🛠️ by creating a correct scope for each module.
 `;
 
